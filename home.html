@@ -889,7 +889,7 @@
 
 
 
-<!-- Add this script at the end of your HTML, after including Bootstrap, jQuery, and other scripts -->
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   $(document).ready(function () {
@@ -899,7 +899,7 @@
 
       var searchTerm = $(this).find("input[name='q']").val().toLowerCase();
 
-      // Iterate through each card
+
       $(".carousel-item .card").each(function () {
         var cardTitle = $(this).find("h5").text().toLowerCase();
 
@@ -924,8 +924,8 @@ $(document).ready(function () {
   });
 
   $(".btn-danger").on("click", function () {
-    var cardContent = $(this).closest(".card").clone(); // Clone the card to avoid modifying the original
-    cardContent.find(".btn-danger").remove(); // Remove the button from the cloned card
+    var cardContent = $(this).closest(".card").clone(); 
+    cardContent.find(".btn-danger").remove();
     cart.push(cardContent.html());
     updateCartDisplay();
   });
@@ -939,14 +939,14 @@ $(document).ready(function () {
   $.each(cart, function (index, cardHtml) {
     cartItems.append("" + cardHtml + "");
 
-    // Extract and add the price to the total
+  
     var priceElement = $(cardHtml).find("h7");
     var priceText = priceElement.text().trim();
 
-    // Remove currency symbol before parsing
+
     priceText = priceText.replace("€", "");
 
-    // Check if the priceText is a valid number
+ 
     if (!isNaN(parseFloat(priceText))) {
       totalPrice += parseFloat(priceText);
     } else {
