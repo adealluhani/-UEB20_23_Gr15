@@ -272,7 +272,41 @@ letter-spacing: 0.2px;
 .event .col-sm-5{
     margin-bottom: 300px
     !important;
+}  
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-top: 50px; /* Shto një marginë lart për të shmangur kalimin në footer */
 }
+
+#hapsira1,
+#hapsira2 {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  border: solid 3px rgba(0, 116, 217, 0.3);
+  background-color: rgba(170, 170, 170, 0.3);
+  resize: both;
+  overflow: auto;
+  cursor: grab;
+}
+
+#hapsira1 img,
+#hapsira2 img {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+#hapsira2 {
+  background-color: rgba(170, 170, 170, 0.6);
+}
+
 
 footer{
   position: inherit;
