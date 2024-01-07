@@ -2,6 +2,10 @@
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .header-container {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
  width: 100%;
  height: 90px;
  border-bottom: 1px solid #fff;
@@ -10,6 +14,7 @@
  align-items: center;
  justify-content: space-between;
  background-color: #fff;
+z-index:1000;
 }
 
 header .logo{
@@ -86,7 +91,9 @@ header .logo a{
 .icons a{
   color: #333;
   margin-right: 7px;
-  
+}
+section{
+  padding: 100px;
 }
 .book-card{
  border: 1px solid #ccc;
@@ -134,10 +141,3 @@ header .logo a{
  .stars i.fas {
    color: #f1a60d;
  }
-.wishlist-heart{
-  cursor: pointer;
-  color: gray;
-}
-.wishlist-heart.fas{
-  color:red;
-}
