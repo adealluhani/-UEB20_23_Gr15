@@ -14,8 +14,8 @@ p{
 }
 header {
     background: url('https://i0.wp.com/jetsettimes.com/wp-content/uploads/2018/02/FACEBOOK-Libraccio-interior.jpg?fit=800%2C533&ssl=1') center/cover no-repeat;
-    background-size: cover; /* Ensure the image covers the entire header */
-    height: 60vh; /* Adjust the height to your preference */
+    background-size: cover; 
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
