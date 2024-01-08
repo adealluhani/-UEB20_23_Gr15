@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +17,7 @@
 </head>
 <body>
   <header>
-    <a href="#" class="logo">libraria dukagjini</a>
+    <a href="home.html" class="logo">libraria dukagjini</a>
     <nav class="navbar">
         <ul>
             
@@ -42,15 +41,14 @@
                 </ul>
             </li>
    
-            <li><a href="#">evente</a></li>
-            <li><a href="#">gift cards</a></li>
+            <li><a href="evente1.html">evente</a></li>
             <li><a href="#">best selling authors</a></li>
             <li class="nav-links"><a href="#">llogaria ime <i class="fas fa-user"></i></a>
               <ul class="dropdown1">
-                <button type="button" class="btn btn-outline-danger" style="margin-top:7px;margin-left: 19px;">krijo llogari</button>
+                <button type="button" class="btn btn-outline-danger" style="margin-top:7px;margin-left: 19px;"><a href="llogaria.html">krijo llogari</a></button>
                <hr></hr>
-                <li><a href="#">lista e deshirave</a></li>
-                <li><a href="#">kyqu</a></li>
+               <li><a href="contact.html">Na kontaktoni</a></li>
+                
             </ul>
           </li>
           <li>
@@ -72,8 +70,19 @@
             <button class="btn btn-success">Checkout</button>
           </div>
         </div>
-
-    
+<!---per favorites-->
+<div class="dropdown-cart-1">
+  <button class="cart-toggle-btn-1">
+    <i class="fas fa-heart"></i>
+    <span class="cart-count-1">0</span>
+  </button>
+<div class="cart-window-1">
+    <div class="cart-items-1">
+      <li class="card-1">
+        
+    </div>
+    </div>
+</div>
     </nav>
 
   </header>
@@ -86,13 +95,13 @@
   </div>
 
   <div class="container">
-    <img  class="img-container" src="img/result (1).png" alt="">
+    <img  class="img-container" src="img/libraria living (4) (1).png" alt="">
   </div>
 
   <div class="container-I">
-   <a href="#" ><img style="height: 200px;width: 300px;" src="img/libra1.png" alt="img"></a>
+   <a href="#" ><img style="height: 200px;width: 300px;" src="Beige and Pink Minimalist Vlog YouTube Intro.gif" alt="img"></a>
    <a href="#" ><img class="img-1" src="img/books of the week.png" alt="img"></a>
-   <a href="#" ><img style="height: 200px;width: 350px;" src="img/Gifting Season (1).png" alt="img"></a>
+   <a href="#" ><img style="height: 200px;width: 350px;" src="Red and Yellow Modern Fun Thanks For Watching YouTube Outro Video.gif" alt="img"></a>
     </div>
    
 
@@ -127,7 +136,7 @@
              
               <i class="fas fa-heart"></i>
           </button>
-          </button>
+       
         </p>
           
         <h5  style="color: black;margin-right: 30px;font-family: cursive;font-size: 18px;">Hajde folim me veten</h6>
@@ -731,7 +740,7 @@
           <i class="my-star star-3" data-star="3"></i>
           <i class="my-star star-4" data-star="4"></i>
           <i class="my-star star-5" data-star="5"></i>
-         <button style="width: 40px;height: 29px;"    class="btn btn-outline-danger">
+         <button style="width: 40px;height: 29px;"    class="btn btn-outline-danger" id="heart-button">
               <i class="fas fa-heart"></i>
           </button>
       </p>
@@ -899,7 +908,6 @@
 
       var searchTerm = $(this).find("input[name='q']").val().toLowerCase();
 
-
       $(".carousel-item .card").each(function () {
         var cardTitle = $(this).find("h5").text().toLowerCase();
 
@@ -924,8 +932,8 @@ $(document).ready(function () {
   });
 
   $(".btn-danger").on("click", function () {
-    var cardContent = $(this).closest(".card").clone(); 
-    cardContent.find(".btn-danger").remove();
+    var cardContent = $(this).closest(".card").clone(); // Clone the card to avoid modifying the original
+    cardContent.find(".btn-danger").remove(); // Remove the button from the cloned card
     cart.push(cardContent.html());
     updateCartDisplay();
   });
@@ -939,14 +947,12 @@ $(document).ready(function () {
   $.each(cart, function (index, cardHtml) {
     cartItems.append("" + cardHtml + "");
 
-  
+    // Extract and add the price to the total
     var priceElement = $(cardHtml).find("h7");
     var priceText = priceElement.text().trim();
 
-
     priceText = priceText.replace("€", "");
 
- 
     if (!isNaN(parseFloat(priceText))) {
       totalPrice += parseFloat(priceText);
     } else {
@@ -962,7 +968,41 @@ $(document).ready(function () {
 
 });
 
+//per favorites
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const addToFavoritesButtons = document.querySelectorAll('.btn.btn-outline-danger');
+    const cartItems = document.querySelector(".cart-items-1");
+
+    let favoritesCount = 0; 
+
+
+    function addToFavorites(event) {
+        const button = event.currentTarget;
+        const card = button.closest(".card");
+        const cardContent = card.cloneNode(true); 
+
+        favoritesCount++;
+        const newItem = document.createElement("li");
+        newItem.classList.add("card-1");
+        newItem.appendChild(cardContent);
+
+        cartItems.appendChild(newItem);
+        updateFavoritesCount();
+    }
+
+  
+    function updateFavoritesCount() {
+        const cartCount = document.querySelector(".cart-count-1");
+        cartCount.textContent = favoritesCount;
+    }
+
+
+    addToFavoritesButtons.forEach(button => {
+        button.addEventListener('click', addToFavorites);
+    });
+});
 
 
 </script>
