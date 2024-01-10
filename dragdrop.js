@@ -1,25 +1,43 @@
-function allowDrop(ev) {
-    ev.preventDefault();
-  }
-  
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-  }
-  
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    var draggedElement = document.getElementById(data);
-    var dropTarget = ev.target;
-  
-    // Kontrolloni nëse elementi është vendosur në hapësirën e dytë (hapsira2)
-    if (dropTarget.id === "hapsira2") {
-      dropTarget.appendChild(draggedElement);
-    } else {
-      // Nëse nuk është vendosur në hapësirën e dytë, kthejeni elementin në vendin fillestar (hapsira1)
-      var initialPosition = document.getElementById("hapsira1");
-      initialPosition.appendChild(draggedElement);
-    }
-  }
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drag(event) {
+ 
+  event.dataTransfer.setData("text/plain", event.target.textContent);
+}
+
+function drop(event) {
+  event.preventDefault();
+
+ 
+  var data = event.dataTransfer.getData("text/plain");
+
+
+  var newBook = document.createElement("div");
+  newBook.className = "book";
+  newBook.textContent = data;
+  newBook.draggable = true;
+  newBook.ondragstart = drag;
+  document.getElementById("recommendationBoard").appendChild(newBook);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Cakto një kohë fillestare
+  const startTime = new Date().getTime();
+
+  // Përdor setTimeout për të azhurnuar kohën çdo sekondë
+  setTimeout(function updateDuration() {
+    const currentTime = new Date().getTime();
+    const elapsedSeconds = Math.floor((currentTime - startTime) / 1000);
+
+    // Shfaq kohën e qëndrimit
+    const timeElapsedElement = document.getElementById("timeElapsed");
+    timeElapsedElement.textContent = `${elapsedSeconds} seconds`;
+
+    // Rifresko kohën çdo sekondë
+    setTimeout(updateDuration, 1000);
+  }, 1000);
+});
   
   
