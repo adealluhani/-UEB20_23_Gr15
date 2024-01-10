@@ -215,7 +215,63 @@ onclick="showAlert()">bashkohu me ne</button>
           </div>
         </div>
         </footer>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
+  //animacione
+    $(document).ready(function(){
+        $("#button").click(function(){
+            $("#pp").animate({
+                opacity: 0.5,
+                width: "50%"
+            }, 1000);
+        });
+        
+    });
+    //Shiko cmiminup
+    $(document).ready(function(){
+    $("#button-1").click(function(){
+        $("#pp1").slideUp();
+    });
 
+    //fadeout
+   $(document).ready(function(){
+    $("#button-2").click(function(){
+      $("#pp2").fadeOut(2000);
+    });
+   });
+
+//fadein me callback
+   $(document).ready(function(){
+        $("#button-3").click(function(){
+            $("#cmimi").fadeIn(1000, function(){
+               
+                alert("Efekti fadeIn është kryer!");
+            });
+        });
+    });
+
+    $(document).ready(function(){
+        $("#button-4").click(function(){
+            $("#cmimi-1").fadeIn(1000, function(){
+               
+                alert("Efekti fadeIn është kryer!");
+            });
+        });
+    });
+
+    
+    $(document).ready(function(){
+        $("#button-5").click(function(){
+            $("#cmimi-2").fadeIn(1000, function(){
+               
+                alert("Efekti fadeIn është kryer!");
+            });
+        });
+    });
+
+});
+
+ </script>
 
 </body>
 </html>
