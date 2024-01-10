@@ -176,8 +176,24 @@ onclick="showAlert()">bashkohu me ne</button>
         margin-top: 20px;
     }
 </style>
-    <p id="duration">Ju keni qendruar ketu per: <span id="timeElapsed">0 seconds</span></p>
-  <script src="scriptt.js"></script> 
+    <h1 style="font-size: 26px;font-family: cursive; margin-top: 70px;">Leviz ne anen tjeter librat te cilet i deshiron ti rekomandosh</h1>
+<hr>
+    <div id="bookList">
+      <h3>Lista e librave</h3>
+      <div class="book" draggable="true" ondragstart="drag(event)">The psychology of money</div>
+      <div class="book" draggable="true" ondragstart="drag(event)">The Alchemist</div>
+      <div class="book" draggable="true" ondragstart="drag(event)">1984</div>
+      <div class="book" draggable="true" ondragstart="drag(event)">Mindset</div>
+    </div>
+  
+    <div id="recommendationBoard" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>Rekomando</h3>
+    </div>
+  <script src="draganddrop.js"></script> 
+
+<p id="duration">Ju keni qendruar ketu per: <span id="timeElapsed">0 seconds</span></p>
+  
+
 <!----footeri-->
 
       <footer>
