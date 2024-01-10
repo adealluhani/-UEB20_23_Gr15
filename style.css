@@ -159,7 +159,7 @@ section {
 .dropdown-cart {
   position: relative;
   display: flex;
-  margin-left: -7px;
+  margin-right: -15px;
   margin-top: -5px;
 }
 
@@ -224,7 +224,6 @@ section {
 .dropdown-cart-1 {
   position: relative;
   display: flex;
-  margin-left: -55px;
   margin-top: -5px;
 }
 
@@ -259,10 +258,6 @@ section {
 .card-1 {
   padding: 10px;
   border-bottom: 1px solid #eee;
-}
-
-.dropdown-cart-1:hover .cart-window-1 {
-  display: block;
 }
 
 .wishlist-heart {
