@@ -2,10 +2,6 @@
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
-body {
-  margin: 0px;
-  padding: 0px;
-}
 .header-container {
 position: fixed;
 top: 0;
@@ -285,6 +281,10 @@ header .navbar ul{
   border: none;
   background-color: #fff;
 }
+
+
+
+
 .nav-links:hover .dropdown{
     display: block;
 }

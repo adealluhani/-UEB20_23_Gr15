@@ -6,9 +6,69 @@
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
-    <header>
-        
-    </header>
+  <header class="container-fluid header-container">
+
+    <div class="logo">
+     <img src="./images/StoryShop.png" alt="Logo">
+     <a href="home.html">The Story Shop</a>
+    </div>
+  
+    <div class="search-container">
+      <form action="" class="search">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="search-button"> <i class="fas fa-search search-icon"></i></button>
+      </form>
+    </div>
+  
+    <nav class="menu-container">
+     <ul>
+      <li><a href="#">Libra shqip</a>
+       <ul>
+        <li><a href="./fantazi.html">Fantazi</a></li>
+        <li><a href="./novela.html">Novela</a></li>
+        <li><a href="./romance.html">Romancë</a></li>
+       </ul>
+      </li>
+      <li><a href="#">Libra të huaj</a>
+       <ul>
+        <li><a href="./english.html">Libra anglisht</a></li>
+        <li><a href="./frengjisht.html">Libra frengjisht</a></li>
+        <li><a href="./turqisht.html">Libra turqisht</a></li>
+       </ul>
+      </li>
+      <li><a href="events_Managemenet.html">Evente</a></li>
+      <li><a href="./about.html">Rreth nesh</a></li>
+      <li><a href="./account.html"><span class="fas fa-user" style="font-size: 20px;"></span></a></li>
+     
+     <div class="dropdown-cart">
+            <button class="cart-toggle-btn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </button>
+          <div class="cart-window">
+              <div class="cart-items">
+                <div class="book-card"></div>
+              </div>
+              <div class="cart-total">
+                <p>Total: <span id="cart-total-price">0€</span></p>
+              </div>
+              <button class="btn btn-success">Checkout</button>
+            </div>
+          </div>
+          <div class="dropdown-cart-1">
+    <button class="cart-toggle-btn-1">
+      <i class="fas fa-heart"></i>
+      <span class="cart-count-1">0</span>
+    </button>
+  <div class="cart-window-1">
+      <div class="cart-items-1">
+        <div class="card-1"></div>
+      </div>
+      </div>
+    </div>
+    </ul>
+    </nav>
+   </header>
     <h3>Online Bookstore</h3>
     <p>
       The main objective of the Online Bookstore is to manage the details of Books,Customer,Payment,Delivery,Bills. <br/> 
