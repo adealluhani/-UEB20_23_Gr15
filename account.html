@@ -219,51 +219,11 @@ input {
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
-
-.social-container {
-	margin: 0px 0;
-}
-
-.social-container a {
-	border: 1px solid #DDDDDD;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	height: 20px;
-	width: 20px;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}
-	 .gender-container {
+ .gender-container {
         display: flex;
         align-items: center;
         margin-bottom: 8px;
-        background-color: #eee;
+        
         border: none;
         padding: 10px 10px;
         width: 100%;
@@ -272,7 +232,7 @@ footer a {
       label.radio-label {
         display: inline-block;
         align-items: center;
-        background-color: #eee;
+       
         padding: 8px 12px;
         margin: 8px 0;
         cursor: pointer;
@@ -287,7 +247,7 @@ footer a {
       input[type="radio"] {
         width: 16px;
         height: 16px;
-        margin-right: 3px; /* Adjust spacing between the circle and text */
+        margin-right: 3px; 
       }
 
       input[type="radio"]:checked + label.radio-label {
@@ -306,25 +266,23 @@ footer a {
 			<input type="email" placeholder="Email" id="signupEmail" autocomplete="email" required />
 			<input type="password" placeholder="Fjalëkalimi" id="signupFjalekalimi" autocomplete="new-password" required />
 			<input type="password" placeholder="Konfirmo fjalëkalimin" id="confirmFjalekalimi" autocomplete="new-password" required />
-			
-             <div class="gender-container">
-            <label
-              for="gjini"
-              style="font-size: 13px; font-weight: 100; margin-right: 30px"
-              >Zgjidh gjininë:</label
-            >
-            <input type="radio" name="gjinia" id="female" />
-            <label for="female" class="radio-label">Femer</label>
-            <input type="radio" name="gjinia" id="male" />
-            <label for="male" class="radio-label">Mashkull</label>
-          </div>
-		  <label for="country"></label>
+			<label for="country"></label>
 		  <input type="text" list="countries" placeholder="Zgjidh vendin" name="country" id="signupCountry" autocomplete="country" required />
 		  <datalist id="countries">
 			  <option value="Shqipëria">
 			  <option value="Kosova">
 			  <option value="Maqedonia">
 		  </datalist>
+             <div class="gender-container">
+            <label
+              for="gjini"
+              style="font-size: 13px; font-weight: 100; margin-right: 30px">Zgjidh gjininë:</label>
+            <input type="radio" name="gjinia" id="female" />
+            <label for="female" class="radio-label">Femer</label>
+            <input type="radio" name="gjinia" id="male" />
+            <label for="male" class="radio-label">Mashkull</label>
+          </div>
+		  
 				<button type="submit">Regjistrohu</button>
 		</form>
 	</div>
@@ -367,25 +325,23 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 function validateSignUpForm() {
-            var signupEmri = document.getElementById('signupEmri').value;
+	       var signupEmri = document.getElementById('signupEmri').value;
             var signupMbiemri = document.getElementById('signupMbiemri').value;
             var signupEmail = document.getElementById('signupEmail').value;
             var signupFjalekalimi = document.getElementById('signupFjalekalimi').value;
             var confirmFjalekalimi = document.getElementById('confirmFjalekalimi').value;
             var signupCountry = document.getElementById('signupCountry').value;
-
+			
             if (signupFjalekalimi !== confirmFjalekalimi) {
                 alert("Fjalëkalimet nuk përputhen!");
-                event.preventDefault(); // Prevent form submission
+                event.preventDefault(); 
             }
 
             if (signupCountry.trim() === "") {
                 alert("Ju lutem zgjidhni një vend!");
-                event.preventDefault(); // Prevent form submission
-            }
+                event.preventDefault(); 
 
-            // Additional validation logic can be added based on your requirements
-        }
+        }}
 </script>
 </body>
 </html>
