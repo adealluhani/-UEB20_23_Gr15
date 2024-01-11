@@ -1,113 +1,105 @@
+.about {
+  margin: 70px;
+  height: 80vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
 
-.photo{
-      background: url('https://i0.wp.com/jetsettimes.com/wp-content/uploads/2018/02/FACEBOOK-Libraccio-interior.jpg?fit=800%2C533&ssl=1') center/cover no-repeat;
-    background-size: cover; 
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }.about {
-    margin: 70px;
-    height: 80vh;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .ekipi {
-    margin: 70px;
-    height: 80vh;
-    background: white;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  }
-  .learn {
-    margin: 70px;
-    height: 80vh;
-    padding: 10px;
-    background: white;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .about img {
-    width: 580px;
-    margin: auto;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 20px;
-  }
-  
-  .a-text {
-    width: 600px;
-    max-width: 100%;
-    padding: 0 10px;
-  }
-  
-  .a-text h4 {
-    font-size: 18px;
-    color: #777777;
-    letter-spacing: 1px;
-    font-weight: 400px;
-    margin-bottom: 10px;
-  }
-  
-  .a-text h1 {
-    font-size: 65px;
-    color: #111111;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  
-  .a-text p {
-    font-size: 16px;
-    color: #777777;
-    line-height: 30px;
-    margin-bottom: 35px;
-  }
-  
-  .a-btn button {
-    background-color: white;
-    padding: 20px 32px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #111111;
-    border: none;
-    outline: none;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    margin-right: 20px;
-  }
-  
-  .a-btn button:hover {
-    background-color: #333;
-    color: white;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  
-  .learn img,
-  .ekipi img {
-    height: 20rem;
-  }
-  
-  .ekipi img {
-    border-radius: 50px;
-  }
-  
-  .pp {
-    text-align: center;
-    margin-top: 14px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 16px;
-    line-height: 22px;
-  }
+.ekipi {
+  margin: 70px;
+  height: 80vh;
+  background: white;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.learn {
+  margin: 70px;
+  height: 80vh;
+  padding: 10px;
+  background: white;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about img {
+  width: 580px;
+  margin: auto;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 20px;
+}
+
+.a-text {
+  width: 600px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.a-text h4 {
+  font-size: 18px;
+  color: #777777;
+  letter-spacing: 1px;
+  font-weight: 400px;
+  margin-bottom: 10px;
+}
+
+.a-text h1 {
+  font-size: 65px;
+  color: #111111;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.a-text p {
+  font-size: 16px;
+  color: #777777;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+.a-btn button {
+  background-color: white;
+  padding: 20px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111111;
+  border: none;
+  outline: none;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+}
+
+.a-btn button:hover {
+  background-color: #333;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.learn img,
+.ekipi img {
+  height: 20rem;
+}
+
+.ekipi img {
+  border-radius: 50px;
+}
+
+.pp {
+  text-align: center;
+  margin-top: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  line-height: 22px;
+}
