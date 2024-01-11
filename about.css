@@ -1,5 +1,6 @@
 .about {
-  margin: 70px;
+  margin: 100px 70px 70px;
+  padding: 1px;
   height: 80vh;
   background: white;
   display: flex;
