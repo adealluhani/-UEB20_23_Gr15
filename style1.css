@@ -309,39 +309,57 @@ margin-left: 150px;
     display: flex;
     
 }
+  
 
-.background-section {
+
+
+.container{
+    margin-top: 50px;
+   max-width: 100%;
+   height: auto;
+   overflow: hidden;
+   background: linear-gradient(to right, #021d2e, #1c0965),url('img/libraria living (4) (1).png');;
+   background-position: center; 
+   background-origin: border-box;
+   background-size: cover; 
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   
+
+   
+}
+.img-container {
+  width: 100%;
+  height: 430px;
+  margin-top: -16px;
+  
+}
+
+
+
+
+.container-I {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh;
-  margin-top: 90px;
-  background-image: url("./images/living.png");
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  margin-top: 4%;
+  padding: 0 11px; 
+ 
 }
 
-.container-I{
-    display: flex;
-    margin-top: 4%;
-padding-left: 11px;
-padding-inline: 5px;
-    
-}
 
 .img-1{
     height: 200px;width: 600px; padding: 10px;
     transition: transform .10s;
+    border: 3px solid rgb(2, 2, 79);
 
 }
 
 .img-1:hover{
     
-        transform: scale(1.04); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        transform: scale(1.04); 
       
 }
+
+
 .navbar-2{
     width: 100%;
     height: 20px ;
@@ -366,6 +384,37 @@ padding-inline: 5px;
 .img:hover {
     transform: scale(1.04); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
+
+
+
+  .stars {
+    margin-right: 100px;
+    margin-bottom: -20px;
+    margin-top: 10px;
+   
+  }
+  .stars i {
+    cursor: pointer;
+    color: #f1a60d;
+  }
+  
+  .stars i.fas {
+    color: #f1a60d;
+  }
+  
+  .star-rating{
+    color: #bebebe;
+    font-size:1.6em;
+    
+   }
+
+
+.btn-outline-danger{
+margin-left: 150px;
+}
+  
+
+
 
 .wrapper .carousel{
     display:grid ;
@@ -427,6 +476,7 @@ padding-inline: 5px;
     margin-left: 5px;
   
 }
+
 
 
 
@@ -664,13 +714,9 @@ footer{
 
 
 
-
-
 .dropdown-cart {
- position: relative;
-  display: flex;
-  margin-right: -15px;
-  margin-top: -5px;
+  position: relative;
+  display: inline-block;
 }
 
 .cart-toggle-btn {
@@ -681,8 +727,7 @@ footer{
   cursor: pointer;
 }
 
-.cart-count,
-.cart-count-1 {
+.cart-count {
   background-color: #dc3545;
   color: #fff;
   border-radius: 50%;
@@ -707,4 +752,82 @@ footer{
   z-index: 1;
 
   
+}
+
+.cart-item img {
+  max-width: 200px; 
+  height: 200px; 
+  border: 1px solid #8a8a8a; /* Add a border to the cart window */
+  border-radius: 5px; 
+  
+}
+
+
+
+.cart-items {
+  max-height: 390px;
+  overflow-x: hidden;
+  }
+
+.cart-total {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+margin-top: 30px;
+}
+
+.btn-success {
+  width: 100%;
+  background-color: #ee1725;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #da172a;
+}
+
+.dropdown-cart-1 {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-toggle-btn-1 {
+  background: none;
+border: none;
+  cursor: pointer;
+  margin-left: 60px;
+
+}
+
+.cart-window-1 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  z-index: 2;
+  
+}
+
+.cart-items-1 {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+overflow-y: auto;
+max-height: 400px;
+height: auto;
+}
+
+.card-1 {
+  
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+ 
+}
+
+
+.dropdown-cart-1:hover .cart-window-1 {
+  display: block;
+ 
 }
