@@ -16,8 +16,9 @@ h2{
 form{
     margin-top: 20px;
 }
-label {display block;
-    margin-bottom: 8px; 
+label { 
+    display:block;
+     margin-bottom: 8px; 
 }
 
 input[type="text"],
@@ -318,6 +319,7 @@ input[type="submit"]:hover{
     border: none;
     background-color: #fff;
   }
+
 
 
 
