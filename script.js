@@ -20,8 +20,8 @@ $(document).ready(function () {
 });
 
 
-// Adding books to the cart
 
+// Adding books to the cart - Ne kete pjese perfshihen try, catch and throw error nese cmimet jane invalide
 $(document).ready(function() {
   function addToCart(book) {
     // Validate book price
@@ -71,6 +71,8 @@ $(document).ready(function() {
   });
 });
 
+
+
 //add to wishlist
 $(document).ready(function() {
     // Function to handle adding a book to the wishlist
@@ -102,6 +104,48 @@ $(document).ready(function() {
   });
 
 
+//funksionet per validim te te dhenave, te forma ne pjesen e kontaktit
+function validateName() {
+        var name = document.getElementById("name").value;
+        if (name.length === 0) {
+            alert("Name cannot be empty");
+            return false;
+        }
+        return true;
+    }
+
+    function validateLastname() {
+        var lastname = document.getElementById("lastname").value;
+        if (lastname.length === 0) {
+            alert("Lastname cannot be empty");
+            return false;
+        }
+        return true;
+    }
+
+    function validateEmail() {
+        var email = document.getElementById("email").value;
+        if (email.length === 0 || !email.includes("@")) {
+            alert("Invalid email address");
+            return false;
+        }
+        return true;
+    }
+
+    function validateForm() {
+        var isNameValid = validateName();
+        var isLastnameValid = validateLastname();
+        var isEmailValid = validateEmail();
+
+        if (isNameValid && isLastnameValid && isEmailValid) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+// Review stars
 document.addEventListener("DOMContentLoaded", function() {
   const starsContainers = document.querySelectorAll(".stars");
 
@@ -145,14 +189,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
-
-
-function scrollToSection(sectionId) {
-  var section = document.getElementById(sectionId);
-  if (section) {
-   section.scrollIntoView({ behavior: 'smooth' });
-  }
- }
 
 
 const books =[
