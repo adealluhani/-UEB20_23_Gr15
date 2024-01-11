@@ -712,8 +712,10 @@ footer{
 
 
 .dropdown-cart {
-  position: relative;
-  display: inline-block;
+ position: relative;
+  display: flex;
+  margin-right: -15px;
+  margin-top: -5px;
 }
 
 .cart-toggle-btn {
@@ -724,7 +726,8 @@ footer{
   cursor: pointer;
 }
 
-.cart-count {
+.cart-count,
+.cart-count-1 {
   background-color: #dc3545;
   color: #fff;
   border-radius: 50%;
@@ -786,7 +789,8 @@ margin-top: 30px;
 /* Basic styling for the favorites menu */
 .dropdown-cart-1 {
   position: relative;
-  display: inline-block;
+  display: flex;
+  margin-top: -5px;
 }
 
 .cart-toggle-btn-1 {
