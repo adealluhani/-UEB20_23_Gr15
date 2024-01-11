@@ -95,7 +95,9 @@ input[type="submit"]:hover{
   margin-top: 60px;
 }
 
-
+#dergoEmail {
+  color: #000;
+  text-decoration:none;
 
 
 
