@@ -295,18 +295,18 @@ footer a {
         color: #fff;
       }
 </style>
-</head>
+
 <body>
     <h2>Kyçu ose vazhdo si mysafir!</h2>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#" id="signupForm"> 
+		<form action="#" id="signupForm" onsubmit="validateSignUpForm()">
 			<h1>Krijo llogari</h1>
-			<span>ose përdore email për tu regjistruar</span>
-			<input type="text" placeholder="Emri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" />
-           <input type="text" placeholder="Mbiemri" autocomplete="family-name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Fjalekalimi" autocomplete="new-password" />
+			<input type="text" placeholder="Emri" id="signupEmri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" required />
+			<input type="email" placeholder="Email" id="signupEmail" autocomplete="email" required />
+			<input type="password" placeholder="Fjalëkalimi" id="signupFjalekalimi" autocomplete="new-password" required />
+			<input type="password" placeholder="Konfirmo fjalëkalimin" id="confirmFjalekalimi" autocomplete="new-password" required />
+			
              <div class="gender-container">
             <label
               for="gjini"
@@ -318,21 +318,19 @@ footer a {
             <input type="radio" name="gjinia" id="male" />
             <label for="male" class="radio-label">Mashkull</label>
           </div>
-           <label for="country"></label>
-                <input type="text" list="countries" placeholder="Zgjidh vendin" name="country" />
-                <datalist id="countries">
-                    <option value="Shqipëria">
-                    <option value="Kosova">
-                    <option value="Maqedonia">
-                    
-                </datalist>
-			<button>Regjistrohu</button>
+		  <label for="country"></label>
+		  <input type="text" list="countries" placeholder="Zgjidh vendin" name="country" id="signupCountry" autocomplete="country" required />
+		  <datalist id="countries">
+			  <option value="Shqipëria">
+			  <option value="Kosova">
+			  <option value="Maqedonia">
+		  </datalist>
+				<button type="submit">Regjistrohu</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="#">
 			<h1>Kyqu</h1>
-			<span>ose përdore llogarin tuaj</span> -->
 			<input type="text" placeholder="Emri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" />
                         <input type="password" placeholder="Password"  />
 			<a href="#">Keni harruar fjalëkalimin?</a>
@@ -356,9 +354,6 @@ footer a {
 		</div>
 	</div>
 </div>
-
-
-</body>
 <script>
     const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
@@ -371,7 +366,28 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
+function validateSignUpForm() {
+            var signupEmri = document.getElementById('signupEmri').value;
+            var signupMbiemri = document.getElementById('signupMbiemri').value;
+            var signupEmail = document.getElementById('signupEmail').value;
+            var signupFjalekalimi = document.getElementById('signupFjalekalimi').value;
+            var confirmFjalekalimi = document.getElementById('confirmFjalekalimi').value;
+            var signupCountry = document.getElementById('signupCountry').value;
+
+            if (signupFjalekalimi !== confirmFjalekalimi) {
+                alert("Fjalëkalimet nuk përputhen!");
+                event.preventDefault(); // Prevent form submission
+            }
+
+            if (signupCountry.trim() === "") {
+                alert("Ju lutem zgjidhni një vend!");
+                event.preventDefault(); // Prevent form submission
+            }
+
+            // Additional validation logic can be added based on your requirements
+        }
 </script>
+</body>
 </html>
 
 
