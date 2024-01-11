@@ -9,7 +9,7 @@
     <h2>Kyçu ose vazhdo si mysafir!</h2>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form action="#" id="signupForm"> 
 			<h1>Krijo llogari</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -17,12 +17,19 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>ose përdore email për tu regjistruar</span>
-			<input type="text" placeholder="Emri" />
-            <input type="text" placeholder="Mbiemri" />
+			<input type="text" placeholder="Emri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" />
+           <input type="text" placeholder="Mbiemri" autocomplete="family-name" />
 			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Fjalkalimi" />
+			<input type="password" placeholder="Fjalekalimi" autocomplete="new-password" />
             <input type="password" placeholder="Komfirmo fjalkalimin" />
-
+<label for="country">Zgjidh vendin:</label>
+                <input type="text" list="countries" placeholder="Zgjidh vendin" name="country" />
+                <datalist id="countries">
+                    <option value="Shqipëria">
+                    <option value="Kosova">
+                    <option value="Maqedonia">
+                    
+                </datalist>
 			<button>Regjistrohu</button>
 		</form>
 	</div>
@@ -35,8 +42,8 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>ose përdore llogarin tuaj</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="text" placeholder="Emri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" />
+                        <input type="password" placeholder="Password"  />
 			<a href="#">Keni harruar fjalëkalimin?</a>
 			<button>Kyqu</button>
 		</form>
