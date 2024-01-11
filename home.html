@@ -894,7 +894,7 @@
     $(".search").on("submit", function (e) {
       e.preventDefault(); 
 
-      var searchTerm = $(this).find("input[name='q']").val().toLowerCase();
+      var searchTerm = $(".search-bar").val().toLowerCase();
 
       $(".carousel-item .card").each(function () {
         var cardTitle = $(this).find("h5").text().toLowerCase();
@@ -907,8 +907,6 @@
       });
     });
   });
-
-
 
 $(document).ready(function () {
   var cart = [];
