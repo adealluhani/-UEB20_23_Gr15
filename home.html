@@ -79,17 +79,28 @@
     </ul>
     </nav>
    </header>
-    
-    <section class="background-section">
-<!--          Background image -->
-    </section>
+
+  <div class="search-bar">
+<form action="" class="search">
+    <input type="text" placeholder="search..." name="q">
+    <button class="search-button"> <i class="fas fa-search search-icon"></i></button>
+</form>
+  </div>
+
+  <div class="container">
+    <img  class="img-container" src="img/libraria living (4) (1).png" alt="">
+  </div>
 
   <div class="container-I">
-   <a href="#" ><img style="height: 200px;width: 250px; margin-right: 30px;margin-left: 15px;" src="img/Black and Beige Simple Book Mockup Instagram Post (1).png" alt="img"></a>
+   <a href="#" ><img style="height: 200px;width: 250px; margin-right: 30px;float: left;" src="img/Black and Beige Simple Book Mockup Instagram Post (1).png" alt="img"></a>
    <a href="#" ><img class="img-1" src="img/oncert.png" alt="img"></a>
-   <a href="#" ><img style="height: 200px;width: 300px;margin-left: 30px;" src="img/Black and Beige Simple Book Mockup Instagram Post.png" alt="img"></a>
+   <a href="#" ><img style="height: 200px;width: 300px;margin-left: 40px;float: right;" src="img/Black and Beige Simple Book Mockup Instagram Post.png" alt="img"></a>
     </div>
    
+
+
+
+
     <nav class="navbar-2">
      
       <ul>
@@ -99,6 +110,7 @@
         <li style="padding-left: 700px;"><button type="button" class="btn btn-outline-danger">More</button></li>
       </ul>
 </nav>
+
 <div id="carouselExample1" class="carousel slide" data-bs-theme="dark">
   <div style="margin-bottom: 50px;" class="carousel-inner">
     <div class="carousel-item active">
@@ -867,7 +879,7 @@
     <div class="top">
       <div class="logo-details">
         <i class="fab fa-slack"></i>
-        <span class="logo_name">Libraria Living</span>
+        <span class="logo_name">Libraria Dukagjini</span>
       </div>
       <div class="media-icons">
         <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -908,7 +920,7 @@
     $(".search").on("submit", function (e) {
       e.preventDefault(); 
 
-      var searchTerm = $(".search-bar").val().toLowerCase();
+      var searchTerm = $(this).find("input[name='q']").val().toLowerCase();
 
       $(".carousel-item .card").each(function () {
         var cardTitle = $(this).find("h5").text().toLowerCase();
@@ -921,6 +933,8 @@
       });
     });
   });
+
+
 
 $(document).ready(function () {
   var cart = [];
@@ -1006,8 +1020,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//per stars
-    document.addEventListener("DOMContentLoaded", function() {
+//per rating
+document.addEventListener("DOMContentLoaded", function() {
   const starsContainers = document.querySelectorAll(".stars");
 
   starsContainers.forEach((starsContainer) => {
@@ -1058,7 +1072,6 @@ function scrollToSection(sectionId) {
    section.scrollIntoView({ behavior: 'smooth' });
   }
  }
-
 
 
 </script>
