@@ -21,39 +21,55 @@ $(document).ready(function () {
 
 
 // Adding books to the cart
+
 $(document).ready(function() {
-      function addToCart(book) {
+  function addToCart(book) {
+    // Validate book price
+    var bookPriceText = book.find(".price").text().replace("€", "");
+    var bookPrice = parseFloat(bookPriceText);
+
+    if (isNaN(bookPrice) || bookPrice <= 0) {
+      // Throw an error if the price is invalid
+      throw new Error("Invalid book price: " + bookPriceText);
+    }
+
     var cartBook = book.clone();
     cartBook.find(".btn button").remove();
     cartBook.find(".star-heart").remove();
-      // Append the new book card to the cart items
-      $(".cart-items").append(cartBook);
 
-      // Update the cart total price
-      var totalPrice = parseFloat($("#cart-total-price").text().replace("€", ""));
-      var bookPrice = parseFloat(book.find(".price").text().replace("€", ""));
-      totalPrice += bookPrice;
-      $("#cart-total-price").text(totalPrice.toFixed(2) + "€");
+    // Append the new book card to the cart items
+    $(".cart-items").append(cartBook);
 
-      // Update the cart count
-      var cartCount = parseInt($(".cart-count").text());
-      $(".cart-count").text(cartCount + 1);
+    // Update the cart total price
+    var totalPrice = parseFloat($("#cart-total-price").text().replace("€", ""));
+    totalPrice += bookPrice;
+    $("#cart-total-price").text(totalPrice.toFixed(2) + "€");
 
-      // Show the cart window
-      $(".cart-window").show();
-    }
+    // Update the cart count
+    var cartCount = parseInt($(".cart-count").text());
+    $(".cart-count").text(cartCount + 1);
 
-    // Click event to add a book to the cart
-    $(".btn button").click(function() {
+    // Show the cart window
+    $(".cart-window").show();
+  }
+
+  // Click event to add a book to the cart
+  $(".btn button").click(function() {
+    try {
       var book = $(this).closest(".book-card");
       addToCart(book);
-    });
-
-    // Click event to toggle the visibility of the cart window
-    $(".cart-toggle-btn").click(function() {
-      $(".cart-window").toggle();
-    });
+    } catch (error) {
+      // Handle the error by logging it or showing an alert
+      console.error("Error adding book to cart:", error.message);
+      alert("Error adding book to cart: " + error.message);
+    }
   });
+
+  // Click event to toggle the visibility of the cart window
+  $(".cart-toggle-btn").click(function() {
+    $(".cart-window").toggle();
+  });
+});
 
 //add to wishlist
 $(document).ready(function() {
