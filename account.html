@@ -219,7 +219,7 @@ input {
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
- .gender-container {
+.gender-container {
         display: flex;
         align-items: center;
         margin-bottom: 8px;
@@ -318,30 +318,75 @@ const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 
 signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
+    container.classList.add("right-panel-active");
 });
 
 signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
+    container.classList.remove("right-panel-active");
 });
-function validateSignUpForm() {
-	       var signupEmri = document.getElementById('signupEmri').value;
-            var signupMbiemri = document.getElementById('signupMbiemri').value;
-            var signupEmail = document.getElementById('signupEmail').value;
-            var signupFjalekalimi = document.getElementById('signupFjalekalimi').value;
-            var confirmFjalekalimi = document.getElementById('confirmFjalekalimi').value;
-            var signupCountry = document.getElementById('signupCountry').value;
-			
-            if (signupFjalekalimi !== confirmFjalekalimi) {
-                alert("Fjalëkalimet nuk përputhen!");
-                event.preventDefault(); 
+
+document.addEventListener('DOMContentLoaded', function () {
+        const signInForm = document.querySelector('.form-container.sign-in-container form');
+
+        signInForm.addEventListener('submit', function (event) {
+            const emailInput = document.querySelector('.form-container.sign-in-container input[type="email"]');
+            const passwordInput = document.querySelector('.form-container.sign-in-container input[type="password"]');
+
+            if (!emailInput.value.trim() || !passwordInput.value.trim()) {
+                alert('Email and password cannot be empty.');
+                event.preventDefault();
             }
+        });
+    });
+    //pjesa e regjistrimit
+    document.addEventListener('DOMContentLoaded', function () {
+        const signUpForm = document.querySelector('form');
 
-            if (signupCountry.trim() === "") {
-                alert("Ju lutem zgjidhni një vend!");
-                event.preventDefault(); 
+        signUpForm.addEventListener('submit', function (event) {
+            const nameInput = document.querySelector('input[placeholder="Emri"]');
+            const surnameInput = document.querySelector('input[placeholder="Mbiemri"]');
+            const emailInput = document.querySelector('input[placeholder="Email"]');
+            const passwordInput = document.querySelector('input[placeholder="Fjalkalimi"]');
+            const confirmPasswordInput = document.querySelector('input[placeholder="Komfirmo fjalkalimin"]');
 
-        }}
+            if (!validateNotEmpty(nameInput, "Emri") ||
+                !validateNotEmpty(surnameInput, "Mbiemri") ||
+                !validateNotEmpty(emailInput, "Email") ||
+                !validateNotEmpty(passwordInput, "Fjalkalimi") ||
+                !validateNotEmpty(confirmPasswordInput, "Komfirmo fjalkalimin") ||
+                !validatePasswordMatch(passwordInput.value, confirmPasswordInput.value) ||
+                !validatePasswordLength(passwordInput.value)) {
+                event.preventDefault();
+            } else {
+                // Registration is successful, show an alert (you can replace this with your logic)
+                alert('Regjistrimi u krye me sukses!');
+            }
+        });
+
+        function validateNotEmpty(input, fieldName) {
+            if (input.value.trim() === '') {
+                alert(`${fieldName} nuk mund të jetë bosh.`);
+                return false;
+            }
+            return true;
+        }
+
+        function validatePasswordMatch(password, confirmPassword) {
+            if (password !== confirmPassword) {
+                alert('Fjalëkalimet nuk përputhen.');
+                return false;
+            }
+            return true;
+        }
+
+        function validatePasswordLength(password) {
+            if (password.length < 8) {
+                alert('Fjalëkalimi duhet të jetë të paktën 8 karaktere.');
+                return false;
+            }
+            return true;
+        }
+    });
 </script>
 </body>
 </html>
