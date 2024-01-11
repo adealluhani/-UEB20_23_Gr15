@@ -4,89 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in/up Form</title>
-</head>
-<body>
-    <h2>Kyçu ose vazhdo si mysafir!</h2>
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#" id="signupForm"> 
-			<h1>Krijo llogari</h1>
-			<!-- <div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div> -->
-			<span>ose përdore email për tu regjistruar</span>
-			<input type="text" placeholder="Emri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" />
-           <input type="text" placeholder="Mbiemri" autocomplete="family-name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Fjalekalimi" autocomplete="new-password" />
-            <input type="password" placeholder="Komfirmo fjalkalimin" />
-           <label for="country"></label>
-                <input type="text" list="countries" placeholder="Zgjidh vendin" name="country" />
-                <datalist id="countries">
-                    <option value="Shqipëria">
-                    <option value="Kosova">
-                    <option value="Maqedonia">
-                    
-                </datalist>
-			<button>Regjistrohu</button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>Kyqu</h1>
-			<!-- <div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>ose përdore llogarin tuaj</span> -->
-			<input type="text" placeholder="Emri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" />
-                        <input type="password" placeholder="Password"  />
-			<a href="#">Keni harruar fjalëkalimin?</a>
-			<button>Kyqu</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Mirësevini përsëri!</h1>
-                <p>Që të jeni të lidhur me ne ju lutem kyqu me të dhënat e tuaja personale </p>
-				<button class="ghost" id="signIn">Kyqu</button>
-                <button class="ghost" id="guess"><a href="home.html">Mysafir</a></button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Përshëndetje!</h1>
-                <p>Shënoni të dhënat e tuaja personale dhe filloni udhëtimin tuaj me ne</p>
-				<button class="ghost" id="signUp">Regjistrohu</button>
-                <button class="ghost" id="guess"><a href="home.html">Mysafir</a></button>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-</body>
-<!-- <footer>
-	<p>
-	</p>
-</footer> -->
-</html>
-<script>
-    const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
-</script>
-<style>
+	<style>
     
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
@@ -341,4 +259,119 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+	 .gender-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        background-color: #eee;
+        border: none;
+        padding: 10px 10px;
+        width: 100%;
+      }
+
+      label.radio-label {
+        display: inline-block;
+        align-items: center;
+        background-color: #eee;
+        padding: 8px 12px;
+        margin: 8px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 13px;
+        font-weight: 100;
+      }
+
+      label.radio-label:hover {
+        background-color: #ddd;
+      }
+      input[type="radio"] {
+        width: 16px;
+        height: 16px;
+        margin-right: 3px; /* Adjust spacing between the circle and text */
+      }
+
+      input[type="radio"]:checked + label.radio-label {
+        background-color: #ff4b2b;
+        color: #fff;
+      }
 </style>
+</head>
+<body>
+    <h2>Kyçu ose vazhdo si mysafir!</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#" id="signupForm"> 
+			<h1>Krijo llogari</h1>
+			<span>ose përdore email për tu regjistruar</span>
+			<input type="text" placeholder="Emri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" />
+           <input type="text" placeholder="Mbiemri" autocomplete="family-name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Fjalekalimi" autocomplete="new-password" />
+             <div class="gender-container">
+            <label
+              for="gjini"
+              style="font-size: 13px; font-weight: 100; margin-right: 30px"
+              >Zgjidh gjininë:</label
+            >
+            <input type="radio" name="gjinia" id="female" />
+            <label for="female" class="radio-label">Femer</label>
+            <input type="radio" name="gjinia" id="male" />
+            <label for="male" class="radio-label">Mashkull</label>
+          </div>
+           <label for="country"></label>
+                <input type="text" list="countries" placeholder="Zgjidh vendin" name="country" />
+                <datalist id="countries">
+                    <option value="Shqipëria">
+                    <option value="Kosova">
+                    <option value="Maqedonia">
+                    
+                </datalist>
+			<button>Regjistrohu</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Kyqu</h1>
+			<span>ose përdore llogarin tuaj</span> -->
+			<input type="text" placeholder="Emri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" />
+                        <input type="password" placeholder="Password"  />
+			<a href="#">Keni harruar fjalëkalimin?</a>
+			<button>Kyqu</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Mirësevini përsëri!</h1>
+                <p>Që të jeni të lidhur me ne ju lutem kyqu me të dhënat e tuaja personale </p>
+				<button class="ghost" id="signIn">Kyqu</button>
+                <button class="ghost" id="guess"><a href="home.html">Mysafir</a></button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Përshëndetje!</h1>
+                <p>Shënoni të dhënat e tuaja personale dhe filloni udhëtimin tuaj me ne</p>
+				<button class="ghost" id="signUp">Regjistrohu</button>
+                <button class="ghost" id="guess"><a href="home.html">Mysafir</a></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+<script>
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
+</html>
+
+
