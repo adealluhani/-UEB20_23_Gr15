@@ -191,68 +191,30 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-const books =[
-  {
-    title: "Orbiting Jupiter ",
-    author: "Gary Schmidt ",
-    price:14.00,
-    quantity: 3
-  },
-  {
-    title: "Metamorphosis ",
-    author: "Franz Kafka ",
-    price: 9.80,
-    quantity: 1
-  },
-   {
-    title: "The Mountain Is You",
-    author: "Brianna West ",
-    price: 11.50,
-    quantity:4
-  },
-   {
-    title: "The Stranger",
-    author: "Albert Camus",
-    price: 15.00,
-    quantity:3 
-  },
-   {
-    title: "The Book Thief",
-    author: "Markus Zusak",
-    price: 13.50,
-    quantity:2
-  }
+// Creating instances of the Book object
+var books = [
+    new Book("The Great Gatsby", "F. Scott Fitzgerald", "Fiction", 15.99),
+    new Book("To Kill a Mockingbird", "Harper Lee", "Classics", 12.50),
+    new Book("The Hobbit", "J.R.R. Tolkien", "Fantasy", 18.75),
 ];
 
-// reduce function- will calculate the total price
-// if the price is invalid, we will throw an error
-function calculateTotalPrice(books) {
-  try {
-    // Use reduce to calculate the total price, throwing an error for invalid prices
-    return books.reduce((total, book) => {
-      if (typeof book.price !== 'number' || isNaN(book.price) || book.price < 0) {
-        throw new Error(`Invalid price for book "${book.title}"`);
-      }
-      return total + book.price;
-    }, 0);
-  } catch (error) {
-    console.error('Error calculating total price:', error.message);
-    return 'Error calculating total price. Please try again later.';
-  }
-}
+// Using map to create an array of book titles
+var bookTitles = books.map(book => book.title);
+console.log("Book Titles:", bookTitles);
 
-const totalPrice = calculateTotalPrice(books);
-console.log('Total Price:', totalPrice.toString());
+// Using filter to get only fiction books
+var fictionBooks = books.filter(book => book.genre === "Fiction");
+console.log("Fiction Books:", fictionBooks);
 
+// Using reduce to calculate the total price of the books
+var CmimiTotal = books.reduce((acc, book) => acc + book.price, 0);
+console.log("Total Price of All Books:", CmimiTotal );
 
-//map function-will return the titles of the books
-const bookTitles = books.map(book => book.title);
-console.log('Book Titles:', bookTitles);
-
-
-//filter function - will find expensive books
-const expensiveBooks=books.filter(book=>book.price>12);
-console.log('Expensive books: ',expensiveBooks);
+// Using map and filter together to get titles of expensive books (price > 15)
+var expensiveBookTitles = books
+    .filter(book => book.price > 15)
+    .map(book => book.title);
+console.log("Expensive Book Titles:", expensiveBookTitles);
 
 
 
