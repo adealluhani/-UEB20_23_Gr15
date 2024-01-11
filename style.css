@@ -266,10 +266,9 @@ section {
 }
 
 
-
 footer{
   position: inherit;
-  background: #f9f8fa;
+  background:#032161;
   width: 100%;
 }
 footer::before{
@@ -295,7 +294,7 @@ footer .content .top{
   margin-bottom: 3px;
 }
 .content .top .logo-details{
-  color: #0c0909;
+  color: #dfdddd;
   font-size: 30px;
 }
 .content .top .media-icons{
@@ -357,7 +356,7 @@ footer .content .link-boxes .box{
   width: calc(100% / 5 - 10px);
 }
 .content .link-boxes .box .link_name{
-  color: #292727;
+  color: #dfdddd;
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 10px;
@@ -377,7 +376,7 @@ footer .content .link-boxes .box{
   list-style: none;
 }
 .content .link-boxes .box li a{
-  color: #5a5858;
+  color: #dfdddd;
   font-family: cursive;
   font-size: 14px;
   font-weight: 400;
