@@ -12,43 +12,14 @@ p{
     margin-left: 400px;
 
 }
-header {
-    background: url('https://i0.wp.com/jetsettimes.com/wp-content/uploads/2018/02/FACEBOOK-Libraccio-interior.jpg?fit=800%2C533&ssl=1') center/cover no-repeat;
+.photo{
+      background: url('https://i0.wp.com/jetsettimes.com/wp-content/uploads/2018/02/FACEBOOK-Libraccio-interior.jpg?fit=800%2C533&ssl=1') center/cover no-repeat;
     background-size: cover; 
     height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-
-footer{
-    position: inherit;
-    background: #f9f8fa;
-    width: 100%;
-  }
-  footer::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 100px;
-    height: 1px;
-    width: 100%;
-  
-  }
-  footer .content{
-    max-width: 1250px;
-    margin: auto;
-    padding: 10px;
-    font-family: cursive;
-    margin-top: 50px;
-  }
-  footer .content .top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 3px;
-  }
+    justify-content: center;}
+/* }
   .content .top .logo-details{
     color: #0c0909;
     font-size: 30px;
@@ -102,16 +73,8 @@ footer{
   .top .media-icons a:nth-child(5):hover{
     color: #FF0000;
     background: #fff;
-  }
-  footer .content .link-boxes{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  footer .content .link-boxes .box{
-    width: calc(100% / 5 - 10px);
-  }
-  .content .link-boxes .box .link_name{
+  } 
+  .link-boxes .box .link_name{
     color: #292727;
     font-size: 18px;
     font-weight: 400;
@@ -300,7 +263,7 @@ footer{
   max-width: 200px; 
   height: 200px; 
   border: 1px solid #8a8a8a; /* Add a border to the cart window */
-  border-radius: 5px; 
+  /* border-radius: 5px; 
   
 }
 
@@ -328,7 +291,7 @@ margin-top: 30px;
 }
 
 
-/* Basic styling for the favorites menu */
+/* Basic styling for the favorites menu 
 .dropdown-cart-1 {
   position: relative;
   display: inline-block;
@@ -420,4 +383,4 @@ height: auto;
 
  .stars i.fas {
    color: #f1a60d;
- }
+ } */ */
