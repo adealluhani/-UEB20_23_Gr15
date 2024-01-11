@@ -11,18 +11,18 @@
 	<div class="form-container sign-up-container">
 		<form action="#" id="signupForm"> 
 			<h1>Krijo llogari</h1>
-			<div class="social-container">
+			<!-- <div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
+			</div> -->
 			<span>ose përdore email për tu regjistruar</span>
 			<input type="text" placeholder="Emri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" />
            <input type="text" placeholder="Mbiemri" autocomplete="family-name" />
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Fjalekalimi" autocomplete="new-password" />
             <input type="password" placeholder="Komfirmo fjalkalimin" />
-<label for="country">Zgjidh vendin:</label>
+           <label for="country"></label>
                 <input type="text" list="countries" placeholder="Zgjidh vendin" name="country" />
                 <datalist id="countries">
                     <option value="Shqipëria">
@@ -36,12 +36,12 @@
 	<div class="form-container sign-in-container">
 		<form action="#">
 			<h1>Kyqu</h1>
-			<div class="social-container">
+			<!-- <div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
-			<span>ose përdore llogarin tuaj</span>
+			<span>ose përdore llogarin tuaj</span> -->
 			<input type="text" placeholder="Emri" autocomplete="given-name" pattern="[a-zA-Z]+" title="Emri duhet të përmbajë vetëm shkronja" />
                         <input type="password" placeholder="Password"  />
 			<a href="#">Keni harruar fjalëkalimin?</a>
@@ -68,10 +68,10 @@
 
 
 </body>
-<footer>
+<!-- <footer>
 	<p>
 	</p>
-</footer>
+</footer> -->
 </html>
 <script>
     const signUpButton = document.getElementById('signUp');
@@ -303,7 +303,7 @@ input {
 }
 
 .social-container {
-	margin: 20px 0;
+	margin: 0px 0;
 }
 
 .social-container a {
@@ -313,8 +313,8 @@ input {
 	justify-content: center;
 	align-items: center;
 	margin: 0 5px;
-	height: 40px;
-	width: 40px;
+	height: 20px;
+	width: 20px;
 }
 
 footer {

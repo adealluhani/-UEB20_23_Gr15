@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +8,14 @@
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script>
+      function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+     section.scrollIntoView({ behavior: 'smooth' });
+    }
+   }
+    </script>
 </head>
 <body>
   <header class="container-fluid header-container">
@@ -74,41 +81,123 @@
     </ul>
     </nav>
    </header>
-   <div class="photo"></div>
-    <h3>Online Bookstore</h3>
-    <p>
-      The main objective of the Online Bookstore is to manage the details of Books,Customer,Payment,Delivery,Bills. <br/> 
-      An online book store is a web application that allows customers to buy books online. Customers can search for<br/>
-      a book by title or author using a web browser,add it to their shopping cart,and then purchase it using a debit or <br/>
-      credit card transaction.Purchasing from an online bookstore will give readers the benefit of having their precious <br/>
-       books delivered to them directly at home. This lowers the challenges of having to physically get to your store and<br/>
-       back.When you purchase online, you save a lot of time that you would have wasted if you went to a traditional<br/>
-       bookshop and wandered from store to store. Aside from that, online purchasing does not have a certain time.<br/>
-       You can shop whenever you want. This is a tremendous benefit for those who are housebound or in situations <br/>
-       where the weather is inclement.Our solution aims to enable the schools to continuously provide good  services<br/>
-       to parents & also improve their own operational efficiency.We believe in the transformative power of literature.<br/> 
-        Our online platform is not just a bookstore; it's a sanctuary for bibliophiles, a place where words come alive,<br/>
-        and stories unfold. We are passionate about connecting readers with the books that speak to their souls,<br/>
-        fostering a community bound by the love of reading.Founded with a vision to make the world of literature accessible to <br/>
-        everyone, our bookstore is a curated haven for book enthusiasts of all ages and tastes. Whether you're an <br/>
-        avid reader seeking the latest bestsellers, a student in pursuit of academic tomes, or a parent searching <br/>
-        for captivating children's books, we've got you covered.Join us for exciting events, book clubs, and author meet-ups.<br/>
-        We believe in the power of community and aim to create a space where book lovers can connect and share their passion for literature.<br/>
-        At our bookstore we are passionate about bringing the joy of reading to our community. Our carefully curated <br/>
-        selection of books spans various genres, ensuring there's something for every reader.Step into and immerse <br/>
-        yourself in the enchanting world of literature. Whether you're seeking a captivating novel, a thought-provoking <br/>
-        non-fiction piece, or a delightful children's book, we have something for everyone.<br/>
-       Thank you for being a part of our community. We look forward to sharing the joy of reading with you.
+    <section class="about">
+      <img src="./images/back.png" alt="AboutUs Image">
+      <div class="a-text">
+       <h4>About Us</h4>
+       <h1>Bookstore</h1>
+       <p>The main objective of the our Bookstore is to manage the details of books, payment, delivery.
+       Customers can search for a book by title or author,add it to their shopping cart,and then purchase it. Purchasing from an online bookstore will give readers the benefit of having their precious books delivered to them directly at home. This lowers the challenges of having to physically get to your store and back. Aside from that, online purchasing does not have a certain time. You can shop whenever you want. This is a tremendous benefit for those who are housebound</p>
    
-        <h3>
-      Quotes about books
-            </h3>
- <p>
-      “Today a reader, tomorrow a leader.” ― Margaret Fuller <br/>
-      “There is more treasure in books than in all the pirate's loot on Treasure Island.” ― Walt Disney<br/>
-       "Books and doors are the same thing. You open them, and you go through into another world." – Jeanette Winterson<br/>
-    </p>
-</body>
+      <div class="a-btn">
+       <button onclick="scrollToSection('ekipi')">Our Team</button>
+       <button onclick="scrollToSection('learnmore')">Learn More</button>
+      </div>
+     </div>
+    </section>
+   
+   <section class="ekipi" id="ekipi">
+      <h2>Our Team</h2>
+      <div class="row">
+      <div class="col">
+      <div class="a-card">
+       <img src="./images/e1.png" alt="">
+       <div class="a-content">
+        <h5>Kemal Sayar</h5>
+        <h6><i>Owner</i></h6>
+       </div>
+      </div>
+     </div>
+    
+     <div class="col">
+      <div class="a-card">
+       <img src="./images/e3.png" alt="">
+       <div class="a-content">
+        <h5>Lisa Afify</h5>
+        <h6><i>Bookdealer</i></h6>
+       </div>
+      </div>
+     </div>
+    
+     <div class="col">
+      <div class="a-card">
+       <img src="./images/e2.png" alt="">
+       <div class="a-content">
+        <h5>Alex Walker</h5>
+        <h6><i>Bookseller</i></h6>
+       </div>
+      </div>
+     </div>
+    
+     <div class="col">
+      <div class="a-card">
+       <img src="./images/e4.png" alt="">
+       <div class="a-content">
+        <h5>Anne Wayne</h5>
+        <h6><i>Bookseller</i></h6>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   
+   
+   <section class="learn" id="learnmore">
+     <h2>Learn More</h2>
+    <div class="row">
+    <div class="col">
+     <div class="a-card">
+      <img src="./images/pick.jpg" style="width: 15rem;" alt="">
+      <div class="a-content">
+       <h5><strong>Pick A Store</strong></h5>
+       <p class="pp">
+        <ol>
+         <li>Prishtinë</li>
+         <li>Vushtrri</li>
+         <li>Mitrovicë</li>
+        </ol>
+       </p>
+      </div>
+     </div>
+    </div>
+   
+    <div class="col">
+     <div class="a-card">
+      <img src="./images/Books.png" alt="">
+      <div class="a-content">
+       <h5><strong>Buy a Book</strong></h5>
+       <p class="pp">Your order will be filled directly by our distributor, and the full profit from your purchase will be sent to bookstore
+       you selected.</p>
+   
+      </div>
+     </div>
+    </div>
+   
+    <div class="col">
+     <div class="a-card">
+      <img src="./images/check.png" alt="">
+      <div class="a-content">
+       <h5><strong>Check the Mail</strong></h5>
+       <p class="pp">You'll receive a confirmation and tracking number when your order is placed, and our in-house customer service team will
+       be standing by if you have issues or returns.</p>
+      </div>
+     </div>
+    </div>
+   
+    <div class="col">
+     <div class="a-card">
+      <img src="./images/help.gif" alt="">
+      <div class="a-content">
+       <h5><strong>Help Bookstores</strong></h5>
+       <p class="pp">We donate profits directly to bookstores—both the funds from direct purchases and our profit pool that's split between
+       our 1,600+ stores.</p>
+      </div>
+     </div>
+    </div>
+   
+    </div>
+   </section>
+   </body>
 <footer>
   <div class="content">
     <div class="top">
