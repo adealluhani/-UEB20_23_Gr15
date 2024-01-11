@@ -121,22 +121,22 @@
 <div class="row">
    <div class="contact-container">
     <h2>Contact Us</h2>
-    <form id="kontakt-forma">
+    <form id="kontakt-forma" onsubmit="return validateForm()">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required
     placeholder="Enter your name..." >
 
     <label for="lastname">LastName:</label>
-    <input type="text" id="lastname" name="lastname" required
+    <input type="text" id="lastname" name="lastname" 
     placeholder="Enter your Lastname..." >
 
     <label for="email">Email:</label>
-    <input type="text" id="email" name="email"  required
+    <input type="text" id="email" name="email"  
     value="@gmail.com">
 
 
     <label for="message">Mesage:</label>
-    <textarea id="message"  name="message" required
+    <textarea id="message"  name="message" 
     placeholder="Enter your message..." ></textarea>
 
    <input type="submit" value="submit">
@@ -180,5 +180,6 @@
             </div>
           </div>
           </footer>
+        <script src="script.js"></script>
 </body>
 </html>
