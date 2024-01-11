@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Cabin';
-  src: url('fonts/Cabin_Condensed-Bold.ttf'),format('ttf');
+  src: url('Cabin_Condensed-Bold.ttf'),format('ttf');
  
 }
 .header-container {
