@@ -305,10 +305,17 @@ header .navbar ul{
     
 }
 .container{
-  margin-top: 100px;
+     margin-top: 50px;
    max-width: 100%;
    height: auto;
    overflow: hidden;
+   background: linear-gradient(to right, #021d2e, #1c0965),url('img/libraria living (4) (1).png');;
+   background-position: center; 
+   background-origin: border-box;
+   background-size: cover; 
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+  
 
    
 }
@@ -338,8 +345,6 @@ padding-inline: 5px;
         transform: scale(1.04); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
       
 }
-
-
 .navbar-2{
     width: 100%;
     height: 20px ;
@@ -350,30 +355,6 @@ padding-inline: 5px;
     padding: 8px 12px;
     position: relative;
     margin-top: 30px;
-}
-
-.navbar-2 ul li a {
-    color:white;
-    text-decoration: none;
-    font-size: 20px;
-
-}
-
-.navbar-2 ul li:after{
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: rgb(190, 24, 24);
-    display: block;
-    margin: auto;
-    transition: 0.1s;
-}
-
-.navbar-2 ul li:hover::after {
-    width: 50%;
-    margin-left: 5px;
-  
-  
 }
 
 .card .img img{
@@ -398,19 +379,19 @@ padding-inline: 5px;
     font-size:1.6em;
     
    }
-/*create the star*/
+
 .my-star::before{
     content:"\002605";
 }
-/*remove the default style (italic) of the star*/
+
 .my-star{
     font-style: unset !important;
 }
-/*set active star color*/
+
 .is-active{
     color:#fb8900;
 }
-/*set color on hover*/
+
 .my-star:not(.is-active):hover{
     color: #fb8900;
 }
@@ -793,7 +774,7 @@ margin-top: 30px;
 }
 
 
-/* Basic styling for the favorites menu */
+
 .dropdown-cart-1 {
   position: relative;
   display: flex;
